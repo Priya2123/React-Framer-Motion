@@ -17,6 +17,7 @@ const Toppings = ({ addTopping, pizza }) => {
       <h3>Step 2: Choose Toppings</h3>
       <ul>
         {toppings.map((topping) => {
+          //includes: to select multiple options
           let spanClass = pizza.toppings.includes(topping) ? "active" : "";
           return (
             <li key={topping} onClick={() => addTopping(topping)}>
