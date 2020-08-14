@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Base = ({ addBase, pizza }) => {
+  //state
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
   return (
