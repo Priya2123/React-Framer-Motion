@@ -7,6 +7,7 @@ import Toppings from "./components/Toppings";
 import Order from "./components/Order";
 
 function App() {
+  //single base, multiple toppings(array)
   const [pizza, setPizza] = useState({ base: "", toppings: [] });
 
   const addBase = (base) => {
@@ -28,7 +29,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/base">
-          {/*props passed in */}
+          {/*props passed in: to access state and func in Base.js */}
           <Base addBase={addBase} pizza={pizza} />
         </Route>
         <Route path="/toppings">
