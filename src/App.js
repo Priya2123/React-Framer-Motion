@@ -28,7 +28,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/base">
-          {/* pizza={pizza} : prop passed in */}
+          {/*props passed in */}
           <Base addBase={addBase} pizza={pizza} />
         </Route>
         <Route path="/toppings">
