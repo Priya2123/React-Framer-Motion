@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Base from "./components/Base";
 import Toppings from "./components/Toppings";
 import Order from "./components/Order";
+import Modal from "./components/Modal";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   //single base, multiple toppings(array)
   const [pizza, setPizza] = useState({ base: "", toppings: [] });
+  const [showModel, setShowModel] = useState(false);
 
   const addBase = (base) => {
     setPizza({ ...pizza, base });
@@ -27,21 +31,24 @@ function App() {
   return (
     <>
       <Header />
-      <Switch>
-        <Route path="/base">
-          {/*props passed in: to access state and func in Base.js */}
-          <Base addBase={addBase} pizza={pizza} />
-        </Route>
-        <Route path="/toppings">
-          <Toppings addTopping={addTopping} pizza={pizza} />
-        </Route>
-        <Route path="/order">
-          <Order pizza={pizza} />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <Modal showModal={showModel} setShowModel={setShowModel} />
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route path="/base">
+            {/*props passed in: to access state and func in Base.js */}
+            <Base addBase={addBase} pizza={pizza} />
+          </Route>
+          <Route path="/toppings">
+            <Toppings addTopping={addTopping} pizza={pizza} />
+          </Route>
+          <Route path="/order">
+            <Order pizza={pizza} setShowModel={setShowModel} />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </>
   );
 }
