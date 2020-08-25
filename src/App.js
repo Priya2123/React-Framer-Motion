@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
   //single base, multiple toppings(array)
   const [pizza, setPizza] = useState({ base: "", toppings: [] });
-  const [showModel, setShowModel] = useState(true);
+  const [showModel, setShowModel] = useState(false);
 
   const addBase = (base) => {
     setPizza({ ...pizza, base });
@@ -42,7 +42,7 @@ function App() {
             <Toppings addTopping={addTopping} pizza={pizza} />
           </Route>
           <Route path="/order">
-            <Order pizza={pizza} />
+            <Order pizza={pizza} setShowModel={setShowModel} />
           </Route>
           <Route path="/">
             <Home />
