@@ -17,6 +17,10 @@ const Base = ({ addBase, pizza }) => {
         delay: 0.5,
       },
     },
+    exit: {
+      x: "-100vw",
+      transition: { ease: "easeInOut" },
+    },
   };
   //child variant : inherits from parent containerVariants (condn: same object names required!)
   const nextVariants = {
@@ -50,6 +54,7 @@ const Base = ({ addBase, pizza }) => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
       // transition={{ type: "spring", delay: 0.5 }}
     >
       <h3>Step 1: Choose Your Base</h3>
