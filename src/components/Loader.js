@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 
 const loaderVariants = {
   animateOne: {
@@ -17,16 +17,30 @@ const loaderVariants = {
       },
     },
   },
+  animateTwo: {
+    x: 0,
+    y: [0, -40],
+    transition: {
+      y: {
+        duration: 0.25,
+        yoyo: Infinity,
+        ease: "easeOut",
+      },
+    },
+  },
 };
 
 const Loader = () => {
+  //useCycle: to toggle between different animations
+  const [animation, cycleAnimation] = useCycle("animateOne", "animateTwo");
   return (
     <>
       <motion.div
         className="loader"
         variants={loaderVariants}
-        animate="animateOne"
+        animate={animation}
       ></motion.div>
+      <div onClick={() => cycleAnimation()}>Cycle Loader</div>
     </>
   );
 };
