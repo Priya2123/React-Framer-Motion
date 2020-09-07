@@ -12,7 +12,7 @@ function App() {
   const location = useLocation();
   //single base, multiple toppings(array)
   const [pizza, setPizza] = useState({ base: "", toppings: [] });
-  const [showModel, setShowModel] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const addBase = (base) => {
     setPizza({ ...pizza, base });
@@ -31,8 +31,11 @@ function App() {
   return (
     <>
       <Header />
-      <Modal showModal={showModel} setShowModel={setShowModel} />
-      <AnimatePresence exitBeforeEnter>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <AnimatePresence
+        exitBeforeEnter
+        onExitComplete={() => setShowModal(false)}
+      >
         <Switch location={location} key={location.key}>
           <Route path="/base">
             {/*props passed in: to access state and func in Base.js */}
@@ -42,7 +45,7 @@ function App() {
             <Toppings addTopping={addTopping} pizza={pizza} />
           </Route>
           <Route path="/order">
-            <Order pizza={pizza} setShowModel={setShowModel} />
+            <Order pizza={pizza} setShowModal={setShowModal} />
           </Route>
           <Route path="/">
             <Home />
