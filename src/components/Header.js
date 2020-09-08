@@ -32,6 +32,7 @@ const Header = () => {
         drag
         dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }} //to spring back
         dragElastic={0.9}
+        dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
       >
         <motion.svg
           className="pizza-svg"
@@ -45,11 +46,21 @@ const Header = () => {
             fill="none"
             d="M40 40 L80 40 C80 40 80 80 40 80 C40 80 0 80 0 40 C0 40 0 0 40 0Z"
             variants={pathVariants}
+            whileHover={{ scale: 1.2, rotate: 90 }}
+            whileTap={{
+              scale: 0.8,
+              rotate: -90,
+            }}
           />
           <motion.path
             fill="none"
             d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z"
             variants={pathVariants}
+            whileHover={{ scale: 1.2, rotate: 90 }}
+            whileTap={{
+              scale: 0.8,
+              rotate: -90,
+            }}
           />
         </motion.svg>
       </motion.div>
