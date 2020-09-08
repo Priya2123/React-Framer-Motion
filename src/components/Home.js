@@ -42,7 +42,15 @@ const Home = () => {
     >
       <h2 animate={{}}>Welcome to Pizza Joint</h2>
       <Link to="/base">
-        <motion.button variants={buttonVariants} whileHover="hover">
+        <motion.button
+          variants={buttonVariants}
+          whileHover="hover"
+          whileTap={{
+            scale: 0.8,
+            rotate: -90,
+            transformOrigin: "100% 50%",
+          }}
+        >
           Create Your Pizza
         </motion.button>
       </Link>
