@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-Framer-Motion/static/css/main.2c0db824.chunk.css",
+    "main.js": "/React-Framer-Motion/static/js/main.d13b3482.chunk.js",
+    "main.js.map": "/React-Framer-Motion/static/js/main.d13b3482.chunk.js.map",
+    "runtime-main.js": "/React-Framer-Motion/static/js/runtime-main.52c41a1a.js",
+    "runtime-main.js.map": "/React-Framer-Motion/static/js/runtime-main.52c41a1a.js.map",
+    "static/js/2.a412fcc0.chunk.js": "/React-Framer-Motion/static/js/2.a412fcc0.chunk.js",
+    "static/js/2.a412fcc0.chunk.js.map": "/React-Framer-Motion/static/js/2.a412fcc0.chunk.js.map",
+    "index.html": "/React-Framer-Motion/index.html",
+    "precache-manifest.b906641dcceb3077a83e61da359c9612.js": "/React-Framer-Motion/precache-manifest.b906641dcceb3077a83e61da359c9612.js",
+    "service-worker.js": "/React-Framer-Motion/service-worker.js",
+    "static/css/main.2c0db824.chunk.css.map": "/React-Framer-Motion/static/css/main.2c0db824.chunk.css.map",
+    "static/js/2.a412fcc0.chunk.js.LICENSE.txt": "/React-Framer-Motion/static/js/2.a412fcc0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52c41a1a.js",
+    "static/js/2.a412fcc0.chunk.js",
+    "static/css/main.2c0db824.chunk.css",
+    "static/js/main.d13b3482.chunk.js"
+  ]
+}
