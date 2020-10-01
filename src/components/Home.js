@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion, transform } from "framer-motion";
+import { motion } from "framer-motion";
 import Loader from "./Loader";
 
 const buttonVariants = {
@@ -13,7 +13,7 @@ const buttonVariants = {
     transition: {
       //yoyo allows us to repeat animations - here any number is the no. of keyframes(from original value)
       yoyo: Infinity,
-      duration: 0.3,
+      duration: 0.4,
     },
   },
 };
@@ -45,11 +45,11 @@ const Home = () => {
         <motion.button
           variants={buttonVariants}
           whileHover="hover"
-          whileTap={{
-            scale: 0.8,
-            rotate: -90,
-            transformOrigin: "100% 50%",
-          }}
+          // whileTap={{
+          //   scale: 0.8,
+          //   rotate: -90,
+          //   transformOrigin: "100% 40%",
+          // }}
         >
           Create Your Pizza
         </motion.button>

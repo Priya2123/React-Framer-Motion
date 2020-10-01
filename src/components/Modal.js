@@ -22,7 +22,7 @@ const modalVariants = {
   },
 };
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal }) => {
   return (
     <AnimatePresence>
       {showModal && (

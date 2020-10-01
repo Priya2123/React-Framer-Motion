@@ -4,7 +4,7 @@ import { motion, useCycle } from "framer-motion";
 const loaderVariants = {
   animateOne: {
     x: [-20, 20],
-    y: [0, -30],
+    y: [0, -35],
     transition: {
       x: {
         yoyo: Infinity,
