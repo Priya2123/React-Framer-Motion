@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {
@@ -11,9 +11,8 @@ const containerVariants = {
     x: 0,
     transition: {
       type: "spring",
-      // delay: 0.5,
       mass: 0.4,
-      damping: 8,
+      damping: 8.2,
       when: "beforeChildren", //complete this animation before any children animation
       staggerChildren: 0.4,
     },

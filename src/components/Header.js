@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import TextLoop from "react-text-loop";
 
 const svgVariants = {
   hidden: {
@@ -70,7 +71,14 @@ const Header = () => {
         animate={{ y: -10 }}
         transition={{ delay: 1.2, type: "spring", stiffness: 150 }}
       >
-        <h1>Pizza Joint</h1>
+        <h1>
+          <TextLoop interval={200}>
+            <span>Pizza</span>
+            <span>Burger</span>
+            <span>Fries</span>
+          </TextLoop>{" "}
+          Joint
+        </h1>
       </motion.div>
     </header>
   );

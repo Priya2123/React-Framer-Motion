@@ -36,11 +36,11 @@ const Toppings = ({ addTopping, pizza }) => {
   //state
   let toppings = [
     "mushrooms",
-    "peppers",
     "onions",
     "olives",
     "extra cheese",
     "tomatoes",
+    "corns",
   ];
 
   return (
